@@ -1,9 +1,21 @@
 import Image from "next/image";
 import styles from "./page.module.css";
+import { GetServerSideProps, NextPage } from 'next';
+import { getData } from '@/app/db';
 
-export default function Home() {
+export async function handler() {
+    // Call the getDataFromTable function to fetch data from the specified table
+    const data = await getData();
+  
+    // Do something with the data (e.g., return it in the response)
+    return { data };
+}
+
+export default async function Home() {
+  const data = await getData();
   return (
     <main className={styles.main}>
+      <h1>{JSON.stringify(data)} </h1>
       <div className={styles.description}>
         <p>
           Get started by editing&nbsp;

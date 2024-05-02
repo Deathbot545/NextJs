@@ -1,8 +1,6 @@
 import React from "react";
 
-export default function RootLayout({
-  children,
-}: Readonly<{
+export default function RootLayout({children,}: Readonly<{
   children: React.ReactNode;
 }>) {
   
@@ -15,27 +13,7 @@ export default function RootLayout({
           integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
           crossOrigin="anonymous"
         />
-        <style>
-          {`
-            body {
-                margin-top: 60px;
-                margin-bottom: 60px;
-            }
-            [data-bs-theme="blue"] {
-                
-            }
-            /* Add to your existing style */
-            /* .d-flex {
-                    display: flex;
-                    }*/
-            .justify-content-center {
-                justify-content: center;
-            }
-            .align-items-center {
-                align-items: center;
-            }
-          `}
-        </style>
+        
       </head>
       <body>
         {/* <div id="spinnerContainer" className="d-flex justify-content-center align-items-center" style={{ display: 'none', position: 'fixed', top: 0, left: 0, height: '100vh', width: '100vw', backgroundColor: 'rgba(0, 0, 0, 0.5)', zIndex: 1050 }}>
@@ -65,9 +43,10 @@ export default function RootLayout({
               <div className="offcanvas-body">
                 {/* Navigation Links styled like your example */}
                 <nav className="nav flex-column">
-                  <a className="nav-link" href="#"><i className="fas fa-home icon-space"></i>Getting Started</a>
+                 
+                  <a className="nav-link " href="/"><i className="fas fa-home icon-space" ></i>Getting Started</a>
                   <a className="nav-link" href="/driver"><i className="fas fa-home icon-space"></i>Driver</a>
-                  <a className="nav-link" href="/dashboard"><i className="fas fa-tachometer-alt icon-space"></i>Dashboard</a>
+                  <a className="nav-link" href="/Dashboard"><i className="fas fa-tachometer-alt icon-space"></i>Dashboard</a>
                   <div className="nav-item dropdown">
                     <a className="nav-link dropdown-toggle" href="#" role="button" id="vehicleDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                       <i className="fas fa-car icon-space"></i>Vehicles
